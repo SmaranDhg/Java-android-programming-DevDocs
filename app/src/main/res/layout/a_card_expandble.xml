@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/expdCrdMainview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    card_view:cardBackgroundColor="@color/colorTurquise"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="5dp"
+    card_view:cardElevation="0px"
+    android:padding="10dp"
+    card_view:cardCornerRadius="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/CanClickHere"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+
+            <!--My dropdown Button -->
+            <RelativeLayout
+                android:id="@+id/button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:gravity="center">
+
+                <View
+                    android:id="@+id/exprTriangle"
+                    android:layout_width="23dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentRight="false"
+                    android:background="@drawable/triangle_light" />
+            </RelativeLayout>
+
+            <TextView
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_gravity="top"
+                android:id="@+id/textView_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:typeface="monospace" />
+        </LinearLayout>
+        <!--The layout below is my ExpandableLayout -->
+        <LinearLayout
+            android:id="@+id/expandableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/ListOfItemsExpandble"
+                android:layout_width="match_parent"
+                android:layout_height="240dp">
+
+            </ListView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

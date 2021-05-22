@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorGray"
+    android:id="@+id/MainView"
+    android:orientation="vertical"
+    tools:context=".A_Classes_Activity">
+    <!-- this is tittle-->
+    <LinearLayout
+        android:id="@+id/AActionBarForClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/Anavigationbutton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp" />
+
+        <TextView
+
+            android:id="@+id/AClassTitle"
+            style="@style/TitleTextOfClasses"
+            android:text="LayoutInflater" />
+    </LinearLayout>
+
+<!--    for methods-->
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/Methods_on_Click"
+        app:cardBackgroundColor="#80000000"
+        app:cardElevation="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:cardCornerRadius="20dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/cNamesIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/MethodsClassName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="15dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="cName"
+                    android:layout_marginRight="70dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/TextColorLight"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/MethodsPlatIcon" android:layout_width="23dp"
+                    android:layout_height="28dp"
+                    app:srcCompat="@drawable/android" />
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_below="@+id/cNamesIcon"
+                android:paddingLeft="20dp"
+                android:paddingBottom="20dp"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/MethodsResults"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="24dp"
+                    android:autoSizeMinTextSize="18dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Explore"
+                    android:textColor="@color/TextColorLight"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/MethodsDescResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="15dp"
+                    android:fontFamily="@font/assistant_extralight"
+                    android:text="Explore"
+                    android:textColor="@color/TextColorLight"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--this is contents-->
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/AContenstScrollbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AActionBarForClass"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="5dp"
+                android:id="@+id/firstStuff"
+                style="@style/CardsOfClasses">
+
+                <LinearLayout
+                    android:id="@+id/ExImLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/AExtendsImplements"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="Extends/Implements"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/AUsedFor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="Used for"
+                        android:textSize="24dp" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/Secondsstuff"
+                android:layout_margin="5dp"
+                style="@style/CardsOfClasses"
+                android:layout_below="@+id/firstStuff">
+
+                <LinearLayout
+                    android:id="@+id/MainViewConstructor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/constTtl"
+                        style="@style/TitleTextOfClasses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-Constructors"
+                        android:textSize="26dp" />
+
+                    <TextView
+
+                        android:id="@+id/AConstructor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="No constructor here ,sorry! "
+                        android:textSize="24dp"
+
+                        />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/ThirdStuff"
+                android:layout_margin="5dp"
+                style="@style/CardsOfClasses"
+                android:layout_below="@+id/Secondsstuff"
+                android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:id="@+id/MainViewRV1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mthdTtl"
+                        style="@style/TitleTextOfClasses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-Methods"
+                        android:textSize="26dp" />
+
+                    <android.support.v7.widget.RecyclerView xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/ARVFOrmethods"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/ActionBarForClass"
+                        android:orientation="vertical"
+                        android:paddingTop="30dp"
+                        >
+
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/fourthStuff"
+                android:layout_margin="5dp"
+                style="@style/CardsOfClasses"
+                android:layout_below="@+id/ThirdStuff"
+                android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:id="@+id/MainViewRV2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cntTtl"
+                        style="@style/TitleTextOfClasses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-Constants"
+                        android:textSize="26dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/ARVFOrConstants"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="30dp"
+                    >
+
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

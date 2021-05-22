@@ -1,0 +1,9 @@
+"boolean add(Object o)",
+"void clear()",
+"Object clone()",
+"boolean contains(Objecto)",
+"booleanisEmpty()",
+"Iterator iterat()",
+"boolean remove(Object o)",
+"int size()"
+

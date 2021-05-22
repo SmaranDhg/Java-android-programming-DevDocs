@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Content"
+    android:id="@+id/MainView"
+    android:background="@color/colorGray"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ActionBarForClassrr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/navigationbutton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/TittleOfContent"
+            style="@style/TitleTextOfClasses"
+            android:text="Java" />
+    </LinearLayout>
+
+    <!--    //for Methods-->
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/pOnCCrd"
+        app:cardBackgroundColor="#80000000"
+        app:cardElevation="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:cardCornerRadius="20dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/cNamesIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/pOnCprogBar"
+                    android:padding="10dp"
+                    android:visibility="visible"
+                    android:indeterminateTint="#73ffffff"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/pOnCcatName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="15dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="Java"
+                    android:layout_marginRight="70dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/TextColorLight"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/pOnCcatIcon" android:layout_width="23dp"
+                    android:layout_height="28dp"
+                    app:srcCompat="@drawable/java" />
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_below="@+id/cNamesIcon"
+                android:paddingLeft="20dp"
+                android:paddingBottom="20dp"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/pOnCpName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="24dp"
+                    android:autoSizeMinTextSize="18dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Explore"
+                    android:textColor="@color/TextColorLight"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/pOnCpDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="15dp"
+                    android:fontFamily="@font/assistant_extralight"
+                    android:text="Explore"
+                    android:textColor="@color/TextColorLight"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/ActionBarForClassrr"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:alpha="1"
+        android:orientation="vertical"
+        tools:context=".recyclerView"
+        android:id="@+id/RecycleViewForLibrary">
+
+
+
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+</RelativeLayout>

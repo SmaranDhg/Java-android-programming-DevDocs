@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="redeem.androidjava">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/noAnim"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="stateHidden">
+        <activity android:name=".CppClassActivity"></activity>
+        <activity android:name=".Cpp_activity" />
+        <activity android:name=".CppContent" />
+        <activity
+            android:name=".SearchActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".A_Classes_Activity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Catagorized_Classes"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".A_categorized_packageList" />
+        <activity android:name=".ContentForAndroid" />
+        <activity android:name=".Classes" />
+        <activity
+            android:name=".ListOfClasses"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".Content" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

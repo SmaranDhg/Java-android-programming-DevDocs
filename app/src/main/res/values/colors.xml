@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorGray">#333333</color>
+    <color name="colorTurquise">#3bd6c6</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorGrayMild">#777777</color>
+    <color name="TextColorDark">#000000</color>
+    <color name="TextColorLight">#ffffff</color>
+    <color name="TextColorContentLight">#b3ffffff</color>
+    <color name="TextColorContentDark">#b3000000</color>
+    <color name="CardColorDark">#26000000</color>
+    <color name="CardColorLight">#80999999</color>
+    <color name="CardColorDarkSmall">#d9000000</color>
+    <color name="CardColorLightSmall">#1a777777</color>
+    <color name="CardHFuncParameter">#08000000</color>
+
+</resources>

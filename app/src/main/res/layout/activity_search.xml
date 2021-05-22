@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:id="@+id/MainView"
+    tools:context=".SearchActivity">
+
+    <LinearLayout
+    android:id="@+id/TitleView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/Title"
+        style="@style/TitleTextOfClasses"
+        android:text="Explore" />
+
+
+</LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/SearchBar"
+        app:cardElevation="0px"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="15dp"
+        android:background="@color/CardColorLight"
+        android:layout_width="match_parent"
+        android:layout_below="@id/TitleView"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:layout_below="@+id/TitleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:layout_margin="5dp"
+                android:id="@+id/search_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/search"
+                />
+
+            <EditText
+                android:layout_marginLeft="5dp"
+                android:id="@+id/search_bar_edt"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Search.."
+                android:textSize="27dp"
+                android:background="@android:color/transparent"
+                >
+
+
+            </EditText>
+
+
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:visibility="visible"
+        android:layout_above="@+id/BNab"
+        android:layout_below="@+id/SearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/reCrd"
+                app:cardCornerRadius="18dp"
+                app:cardBackgroundColor="@color/colorGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/Results"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/title_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Results:"
+                        android:textSize="18dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="5dp"
+                        />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_below="@+id/title_result"
+                        android:id="@+id/RecycleViewForSearchResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/Frequents"
+            android:layout_below="@+id/reCrd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             >
+
+            <TextView
+                android:id="@+id/title_frequent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Frequent:"
+                android:textSize="18dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@+id/title_frequent"
+                android:id="@+id/RecycleViewForFrequentSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/Activity"
+                android:layout_below="@+id/Frequents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/title_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Activities:"
+                    android:textSize="18dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_below="@+id/title_activity"
+                    android:id="@+id/RecycleViewForActivities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/Methods_on_Click"
+        app:cardBackgroundColor="#80000000"
+        app:cardElevation="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:cardCornerRadius="20dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/cNamesIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/MethodsClassName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="15dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="cName"
+                    android:layout_marginRight="70dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/TextColorLight"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/MethodsPlatIcon" android:layout_width="23dp"
+                    android:layout_height="28dp"
+                    app:srcCompat="@drawable/android" />
+
+            </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_below="@+id/cNamesIcon"
+            android:paddingLeft="20dp"
+            android:paddingBottom="20dp"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/MethodsResults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoSizeMaxTextSize="24dp"
+                android:autoSizeMinTextSize="18dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Explore"
+                android:textColor="@color/TextColorLight"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/MethodsDescResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoSizeMaxTextSize="20dp"
+                android:autoSizeMinTextSize="15dp"
+                android:fontFamily="@font/assistant_extralight"
+                android:text="Explore"
+                android:textColor="@color/TextColorLight"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/ProgressBar"
+        app:cardBackgroundColor="#80000000"
+        app:cardElevation="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:cardCornerRadius="20dp"
+        >
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ProgressBarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:padding="5dp"
+                    android:id="@+id/ProgressBarCircular"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:indeterminate="false"
+                    android:indeterminateBehavior="cycle"
+                    android:indeterminateTint="#73ffffff"
+                  />
+
+                    <TextView
+                        android:id="@+id/ProgressBarTitleText"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoSizeMaxTextSize="24dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:text="This is first time setting up. . ."
+                        android:textColor="@color/TextColorLight"
+                        android:textSize="20dp" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_margin="10dp"
+                android:id="@+id/ProgressBarProgressText"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoSizeMaxTextSize="24dp"
+                android:autoSizeMinTextSize="18dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/ProgressBarTitle"
+                android:fontFamily="sans-serif-thin"
+                android:text="traversing: assync"
+                android:textColor="@color/TextColorLight"
+                android:textSize="20dp" />
+
+
+            <ProgressBar
+                android:layout_margin="20dp"
+                android:secondaryProgressTint="@color/colorTurquise"
+                android:id="@+id/ProgressBarHorizontal"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressTint="@color/colorTurquise"
+                android:progress="50"
+                android:layout_below="@+id/ProgressBarProgressText"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="105dp" />
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/BNab"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:id="@+id/homeIcon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/home_icon" />
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/search_selected" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

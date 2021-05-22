@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/actvtMainView"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="19dp">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/activities_title"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/activities_pName_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Package:"/>
+
+            <TextView
+                android:textSize="20dp"
+                android:id="@+id/activities_pName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" android.animation"/>
+
+        </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/activities_cName_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class:"/>
+
+                <TextView
+                    android:textSize="20dp"
+                    android:id="@+id/activities_cName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Animator"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/activities_result_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/android"
+                />
+
+
+        <LinearLayout
+        android:layout_below="@+id/activities_title"
+        android:id="@+id/layout_methods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/activities_methods_title"
+            android:textSize="20dp"
+            android:text="Methods:"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ListView
+            android:visibility="visible"
+            android:id="@+id/activities_methods_list"
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+
+        </ListView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/layout_methods"
+            android:id="@+id/layout_constant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:id="@+id/activities_constant_title"
+                android:textSize="20dp"
+                android:text="Constant:"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ListView
+                android:visibility="visible"
+                android:id="@+id/activities_constant_list"
+                android:layout_width="match_parent"
+                android:layout_height="240dp">
+            </ListView>
+            <TextView
+                android:id="@+id/activities_constant_null"
+                android:visibility="gone"
+                android:textSize="20dp"
+                android:text="null"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

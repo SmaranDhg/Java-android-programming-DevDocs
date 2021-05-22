@@ -1,0 +1,67 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/CardsOfClasses"
+    android:layout_gravity="center"
+    android:longClickable="true"
+    android:clipToPadding="false"
+    android:layout_margin="15dp"
+    android:padding="5dp"
+    android:id="@+id/clsMCDCrd3"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="15dp"
+    android:layout_height="100dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/ClassProgressBar"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:indeterminateTint="#73ffffff"
+            android:layout_alignParentRight="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            />
+
+
+        <TextView
+            android:text="rajm"
+            android:textColor="@color/TextColorLight"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:textSize="24dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/ClassName"
+            />
+
+        <TextView
+            android:layout_below="@+id/ClassName"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:id="@+id/ClassDescrition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="18dp"
+            android:autoSizeMinTextSize="16dp"
+            android:fontFamily="sans-serif-thin"
+            android:maxLines="2"
+            android:padding="5dp"
+            android:text="harami ka\npilla\nta\naha \ntara\nrar\nrarar"
+            android:textColor="@color/TextColorLight" />
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</android.support.v7.widget.CardView>

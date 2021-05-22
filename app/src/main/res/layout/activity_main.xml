@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorGray"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/MainView"
+   >
+
+    <LinearLayout
+        android:id="@+id/ActionBarForClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/navigationbutton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/Title"
+            style="@style/TitleTextOfClasses"
+            android:text="DevDocs B*t*h!" />
+        <ImageView
+            android:id="@+id/nd_mode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="15dp" />
+    </LinearLayout>
+    <ScrollView
+
+
+        android:id="@+id/content"
+        android:layout_below="@+id/ActionBarForClass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="false"
+        android:layout_above="@+id/BNab"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+          android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/firstStuff"
+            style="@style/CardsOfClasses">
+
+            <LinearLayout
+                android:id="@+id/javaLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+
+                        style="@style/TitleTextOfClasses"
+                        android:text="JAVA" />
+                    <ImageView
+                        android:id="@+id/java_cnt_icon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="8dp" />
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:visibility="visible"
+                    android:text="Content of java"
+                    android:id="@+id/JavaContent"
+                    style="@style/textForIt"
+                    />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/Secondsstuff"
+            android:layout_marginBottom="30dp"
+            android:layout_below="@+id/firstStuff"
+            style="@style/CardsOfClasses">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+
+                        style="@style/TitleTextOfClasses"
+                        android:text="ANDROID" />
+                    <ImageView
+                        android:id="@+id/android_cnt_icon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="8dp" />
+                </LinearLayout>
+
+                <TextView
+                   android:id="@+id/AndroidContent"
+                    android:text="Content of Android "
+                    style="@style/textForIt"
+                    />
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+             android:id="@+id/t"
+             android:layout_marginBottom="30dp"
+                android:layout_below="@+id/Secondsstuff"
+                style="@style/CardsOfClasses">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+
+                            style="@style/TitleTextOfClasses"
+                            android:text="C PLUS PLUS" />
+                        <ImageView
+                            android:id="@+id/cpp_cnt_icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="8dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/CPPContent"
+                        android:text="Content of Cpp "
+                        style="@style/textForIt"
+                        />
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/python_crd"
+                android:layout_marginBottom="30dp"
+                android:layout_below="@+id/t"
+                style="@style/CardsOfClasses">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+
+                            style="@style/TitleTextOfClasses"
+                            android:text="PYTHON" />
+                        <ImageView
+                            android:id="@+id/python_cnt_icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="8dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/python_Content"
+                        android:text="Content of Cpp "
+                        style="@style/textForIt"
+                        />
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/tf_crd"
+                android:layout_marginBottom="30dp"
+                android:layout_below="@+id/python_crd"
+                style="@style/CardsOfClasses">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+
+                            style="@style/TitleTextOfClasses"
+                            android:text="TENSORFLOW" />
+                        <ImageView
+                            android:id="@+id/tf_cnt_icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="8dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tf_Content"
+                        android:text="Content of Cpp "
+                        style="@style/textForIt"
+                        />
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/soup_crd"
+                android:layout_marginBottom="30dp"
+                android:layout_below="@+id/tf_crd"
+                style="@style/CardsOfClasses">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+
+                            style="@style/TitleTextOfClasses"
+                            android:text="SOUP" />
+                        <ImageView
+                            android:id="@+id/soup_cnt_icon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="8dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/soup_Content"
+                        android:text="Content of Cpp "
+                        style="@style/textForIt"
+                        />
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+   
+
+
+
+<LinearLayout
+    android:padding="20dp"
+ android:orientation="horizontal"
+    android:id="@+id/BNab"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+
+        android:id="@+id/homeIcon"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/home_selected" />
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/search" />
+
+
+</LinearLayout>
+
+
+
+
+
+</RelativeLayout>
