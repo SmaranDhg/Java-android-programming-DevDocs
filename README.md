@@ -19,6 +19,17 @@ The search feature is just the sql search from table directly,
 to reduce the overhead I limited the maximum list to 10, hence creating
 the breakpoint of search to 10.
 
+### You can use prefixes to specify what you are searching for 
+faster retrival.
+
+```
+# for class
+c class_name
+
+# for method
+m method_name
+```
+
 ## Dark Mode:
 
 Dark mode is accomplish either by the time reaching beyond 6 at evening and 6 at morning,
