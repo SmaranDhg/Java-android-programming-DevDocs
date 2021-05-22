@@ -19,8 +19,8 @@ The search feature is just the sql search from table directly,
 to reduce the overhead I limited the maximum list to 10, hence creating
 the breakpoint of search to 10.
 
-### You can use prefixes to specify what you are searching for 
-faster retrival.
+### You can use prefixes 
+To specify what you are searching for faster retrival.
 
 ```
 # for class
